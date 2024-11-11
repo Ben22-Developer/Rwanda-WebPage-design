@@ -1,0 +1,518 @@
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    font-family: cursive;
+    letter-spacing: 0.1rem;
+    line-height: 2rem;
+}
+
+body {
+
+    background-color: rgb(222, 247, 245);
+}
+
+img,video {
+    width:100%;
+    height:100%; 
+}
+
+main {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas:
+    "header header header"
+    "page-navigation page-navigation page-navigation" 
+    "main-content main-content sidebar"
+    "visit-rwanda-title visit-rwanda-title sidebar"
+    "gorilla-pic-div hills-pic-div sidebar"
+    "visit-video-div visit-video-div sidebar"
+    ;
+    gap:1rem;
+}
+
+header {
+    position: relative;
+    height:var(--header-height);
+    background:linear-gradient(rgba(32, 169, 232, 0.6) 20%,rgba(204, 236, 92, 0.642),rgba(6, 146, 6, 0.865));
+    padding: 1rem 2rem;
+    grid-area: header;
+}
+
+header h1 {
+    margin-bottom: 1rem;
+    
+    /*margin:0 auto 0 auto 1rem;*/
+}
+
+.intore-pic-div {
+    position: relative;
+    width: var(--intore-pic-div-width);
+    height:var(--intore-pic-div-height);
+    float:right;
+    z-index: -1;
+}
+
+.page-navigation {
+    background-color: rgb(6, 146, 6);
+    color: aliceblue;
+    position: sticky;
+    top: 0;
+    z-index:1;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+    grid-area: page-navigation;
+}
+
+.navigation-bars a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.navigation-bars a:hover {
+    text-decoration:underline;
+}
+
+.navigation-bars a:active {
+    color: aquamarine;
+    text-decoration:none;
+}
+
+.navigation-bars {
+    display: flex;
+    gap:2rem;
+}
+
+.main-content {
+    background-color: aliceblue;
+    margin: 0 0 0 2rem;
+    padding: 1rem 2rem;
+    grid-area: main-content;
+}
+
+.main-content h3 {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.main-content figure {
+    width:70%;
+    margin: 0 auto 1rem auto;
+}
+
+.main-content figure figcaption {
+    text-align: center;
+}
+
+.main-content h4 {
+    margin-bottom: 0.5rem;
+}
+
+.main-content ul li span {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+main h2:first-of-type {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0 0.5rem 2rem;
+    grid-area: visit-rwanda-title;
+}
+
+.gorilla-pic-div {
+    margin: 0 0 0 2rem;
+    grid-area: gorilla-pic-div;
+}
+
+.hills-pic-div {
+    grid-area: hills-pic-div;
+}
+
+.hills-pic-div figure {
+    background-color: aliceblue;
+    height:100%;
+}
+
+.gorilla-pic-div figure,.hills-pic-div figure img {
+    background-color: aliceblue;
+    height: max-content;
+}
+
+.gorilla-pic-div,.hills-pic-div figcaption {
+    text-align: center;
+} 
+
+.gorilla-pic-div figcaption span,.hills-pic-div figcaption span {
+    font-weight: bold;
+    display: block;
+}
+
+.gorilla-pic-div img:hover,.hills-pic-div img:hover,.main-content figure img:hover,.visit-video-div:hover  {
+    transform: scale(120%);
+}
+
+.visit-video-div {
+    margin: 0 0 0 2rem;
+    background-color: rgb(32, 169, 232);
+    grid-area: visit-video-div;
+    display: grid;
+    grid-template-columns: repeat(1,100%);
+    grid-template-areas:
+    "visit-video-div-figure"
+    ;
+}
+
+.visit-video-div figure {
+    grid-area: visit-video-div-figure;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.visit-video-div img {
+    grid-column: 1/2;
+}
+
+.visit-video-div figure figcaption {
+    text-align: center;
+    color: aliceblue;
+    grid-column: 2/3;
+}
+
+.visit-video-div figure figcaption span {
+    font-weight: bold;
+    display: block;
+}
+
+.sidebar {
+    background-color: aliceblue;
+    margin: 0 2rem 0 0;
+    grid-area: sidebar;
+}
+
+.sidebar h4 {
+    margin: 0.5rem 0;
+}
+
+.sidebar ul {
+    width:100%;
+}
+
+.sidebar ul li {
+    width:100%;
+    list-style: none;
+    padding: 1rem 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+}
+
+.sidebar ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    color:rgb(13, 77, 13);
+    text-decoration: underline;
+}
+
+.line {
+    height: 0.01rem;
+    width:100%;
+    background-color: black;
+}
+
+.questions {
+    width:100%;
+    margin-top: 1rem;
+}
+
+.questions p,.questions h5,.sidebar ul li,.sidebar h4 {
+    text-align: center;
+}
+
+footer {
+    background-color: aliceblue;
+    padding: 1rem 0;
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+footer a {
+    border:2px solid black;
+    border-radius: 20rem;
+    padding: 0.1rem 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover {
+    background: rgb(32, 169, 232);
+    color: aliceblue;
+    cursor: pointer;
+    border: none;
+}
+
+footer a:active {
+    background: rgb(13, 77, 13);
+    color: aliceblue;
+    cursor: pointer;
+    border: none;
+}
+
+.social-media h4 {
+    margin: 1rem 0;
+    grid-area: link-title;
+}
+
+.social-media {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: 
+    "link-title link-title"
+    "github instagram"
+    "facebook gmail"
+    ;
+    gap:0.5rem;
+}
+
+#github-icon {
+    grid-area:github;
+    width:10rem;
+    justify-self: end;
+}
+
+#instagram-icon {
+    grid-area: instagram;
+    width:13rem;
+}
+
+#gmail-icon {
+    grid-area: facebook;
+    width:10rem;
+    justify-self: end;
+}
+
+#facebook-icon {
+    grid-area: gmail;
+    width:13rem;
+}
+
+#copyright {
+    text-align: center;
+}
+
+:root {
+    --intore-pic-div-width:15rem;
+    --intore-pic-div-height:10rem;
+    --header-height:30vh;
+}
+
+@media (min-width:1920px) {
+    html {
+        font-size: 25px;
+    }
+}
+
+@media (min-width:1440px) and (max-width:1920px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media (min-width:1024px) and (max-width:1440px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+    html {
+        font-size: 14px;
+    }
+    :root {
+        --intore-pic-div-width:10rem;
+        --intore-pic-div-height:7rem;
+    }
+}
+
+@media (min-width:650px) and (max-width:768px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media (max-width:650px)  {
+    html {
+        font-size: 12px;
+    }
+
+    main {
+        grid-template-columns: repeat(4,1fr);
+        grid-template-areas:
+        "header header header header"
+        "page-navigation page-navigation page-navigation page-navigation" 
+        "main-content main-content main-content main-content"
+        "visit-rwanda-title visit-rwanda-title visit-rwanda-title visit-rwanda-title"
+        "gorilla-pic-div gorilla-pic-div  hills-pic-div hills-pic-div"
+        "visit-video-div visit-video-div visit-video-div visit-video-div"
+        "sidebar sidebar sidebar sidebar"
+        ;
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    .page-navigation {
+        grid-area: page-navigation;
+    }
+
+    .main-content {
+        grid-area: main-content;
+    }
+
+    main h2:first-of-type {
+        grid-area: visit-rwanda-title;
+    }
+
+    .gorilla-pic-div {
+        grid-area: gorilla-pic-div;
+    }
+
+    .visit-video-div {
+        grid-area: visit-video-div;
+    }
+
+    .main-content,.hills-pic-div,.visit-video-div {
+        margin-right: 2rem;
+    }
+
+    .sidebar {
+        margin-left: 2rem;
+        padding:0 1rem;
+    } 
+
+    .line {
+    display: none;
+    }
+
+    .official-sidebar ul {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-areas: 
+        "first-child middle-child last-child"
+        ;
+    }
+
+    .official-sidebar ul li:first-of-type {
+        grid-area:first-child;
+        border: 2px solid black;
+    }
+
+    .official-sidebar ul li:nth-of-type(2) {
+        grid-area: middle-child;
+        border: 2px solid black;
+        border-left: none;
+    }
+
+    .official-sidebar ul li:last-of-type {
+        grid-area: last-child;
+        border: 2px solid black;
+        border-left: none;
+    }    
+
+    .sidebar-row2 {
+        grid-area: sidebar-row2;
+    }
+}
+
+
+@media (max-width:560px) and (min-width:460px) {
+    html {
+        font-size: 10px;
+    }
+
+    :root {
+        --intore-pic-div-width:10rem;
+        --intore-pic-div-height:10rem;
+    }
+}
+
+@media (max-width:460px) {
+    header p {
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    :root {
+        --intore-pic-div-width:10rem;
+        --intore-pic-div-height:7rem;
+    }
+    main {
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "header"
+    "page-navigation" 
+    "main-content"
+    "visit-rwanda-title"
+    "gorilla-pic-div"
+    "hills-pic-div"
+    "visit-video-div"
+    "sidebar"
+    ;
+}
+
+header {
+    grid-area: header;
+}
+
+.page-navigation {
+    grid-area: page-navigation;
+}
+
+.main-content {
+    grid-area: main-content;
+}
+
+main h2:first-of-type {
+    grid-area: visit-rwanda-title;
+}
+
+.gorilla-pic-div {
+    grid-area: gorilla-pic-div;
+    margin-right: 2rem;
+}
+
+.hills-pic-div {
+    grid-area: hills-pic-div;
+    margin-left: 2rem;
+}
+
+.visit-video-div {
+    grid-area: visit-video-div;
+}
+}
+
+@media (max-width:370px) {
+    html {
+        font-size: 9px;
+    }
+}
