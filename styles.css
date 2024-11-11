@@ -14,8 +14,8 @@ html {
 }
 
 body {
-
     background-color: rgb(222, 247, 245);
+    overflow-y: hidden;
 }
 
 img,video {
@@ -48,8 +48,6 @@ header {
 
 header h1 {
     margin-bottom: 1rem;
-    
-    /*margin:0 auto 0 auto 1rem;*/
 }
 
 .intore-pic-div {
@@ -356,10 +354,12 @@ footer a:active {
 }
 
 @media (max-width:650px)  {
+    * {
+    font-family:sans-serif;
+    }
     html {
         font-size: 12px;
     }
-
     main {
         grid-template-columns: repeat(4,1fr);
         grid-template-areas:
