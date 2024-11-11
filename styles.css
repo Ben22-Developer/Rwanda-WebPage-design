@@ -341,6 +341,12 @@ footer a:active {
     }
 }
 
+@media (max-width: 768px) {
+    * {
+        font-family:sans-serif;
+    }
+}
+
 @media (min-width:650px) and (max-width:768px) {
     html {
         font-size: 12px;
