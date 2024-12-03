@@ -328,6 +328,9 @@ footer a:active {
     }
 }
 @media (width<768px) {
+    * {
+        font-family: sans-serif;
+    }
     main {
     grid-template-columns: 100%;
     grid-template-areas:
