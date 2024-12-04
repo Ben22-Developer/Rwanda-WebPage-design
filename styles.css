@@ -349,7 +349,8 @@ footer a:active {
         grid-area: page-navigation;  
     }
     .sidebar {
-        padding: 1.5rem;
+        margin: 0 2rem;
+        padding: 1rem;
         grid-area: sidebar;
         .sidebar-row1 {
             .official-sidebar ul {
