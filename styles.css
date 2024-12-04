@@ -255,7 +255,7 @@ footer a:active {
     grid-template-areas: 
     "link-title link-title"
     "github instagram"
-    "facebook gmail"
+    "facebook whatsapp"
     ;
     gap:0.5rem;
 }
@@ -266,16 +266,16 @@ footer a:active {
 }
 #instagram-icon {
     grid-area: instagram;
-    width:13rem;
+    width:10rem;
 }
-#gmail-icon {
+#whatsapp-icon {
+    grid-area: whatsapp;
+    width:10rem;
+}
+#facebook-icon {
     grid-area: facebook;
     width:10rem;
     justify-self: end;
-}
-#facebook-icon {
-    grid-area: gmail;
-    width:13rem;
 }
 #copyright {
     text-align: center;
