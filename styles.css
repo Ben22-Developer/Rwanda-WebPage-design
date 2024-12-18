@@ -399,3 +399,8 @@ footer a:active {
         font-size: 10px;
     }
 }
+@media (height <= 320px) {
+    .page-navigation {
+            position:relative !important;
+    }
+}
